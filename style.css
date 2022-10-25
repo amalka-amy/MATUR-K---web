@@ -53,10 +53,12 @@ p{
 
     h1{
         font-size: 100px;
+        color: var(--white);
     }
 
     p{
         font-size: 40px;
+        color: var(--white);
     }
 
     .nadpis{
