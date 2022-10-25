@@ -6,6 +6,7 @@ html { box-sizing: border-box; }
 }
 body{
     display:flex;
+    flex-direction: column;
     min-height: 100vh;
     min-width: 100vw;
     justify-content: center;
@@ -13,8 +14,55 @@ body{
     background-color: var(--black);
 }
 
+h1, p{
+    font-family: 'Bungee', cursive; 
+    text-align: center;
+}
+
 h1{
     color: var(--white);
-    font-family: 'Tahoma';
-    font-weight: 400;
+    font-size: 35px;;
+}
+
+p{
+    color: var(--white);
+    font-size: 20px;
+}
+
+.nadpis{
+    display:flex;
+    flex-direction: column;
+}
+
+.nadpis h1{
+    margin:0px;
+}
+
+.text{
+    display:flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.potkate{
+    margin-top: 80px;
+}
+
+
+
+@media screen and (min-width: 1400px){
+
+    h1{
+        font-size: 100px;
+    }
+
+    p{
+        font-size: 40px;
+    }
+
+    .nadpis{
+        margin-top: 40px;
+    }
+
+
+
 }
