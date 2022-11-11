@@ -12,7 +12,6 @@ html { box-sizing: border-box; }
     height: 100vh;
 }
 
-
 @font-face {
     font-family: "veteran";
     src: url(fonts/veteran.ttf);
@@ -55,6 +54,7 @@ p, a{
 .nadpis{
     display:flex;
     flex-direction: column;
+    margin-top: 1em;
 }
 
 .nadpis h1{
@@ -112,7 +112,6 @@ p, a{
     left: 0;
     right: 0;
     opacity: 0;
-    width: 50%;
     background-color: #626161af;
 
 }
@@ -121,13 +120,10 @@ p, a{
     opacity: 1;
 }
 
-
-
 .zak{
     width: 30vw;
     position: relative;
 }
-
 
 .image{
     width: 100%;
@@ -137,9 +133,6 @@ p, a{
 
 
 @media screen and (min-width: 1400px){
-    .text{
-        margin-top: 15vh;
-    }
 
     h1, h2, p, a{
         letter-spacing: 5px;
@@ -170,14 +163,18 @@ p, a{
     .galerie{
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         column-gap: 0px;
+        row-gap: 5px;
 
     }
 
     .image, .overlay, .zak{
-        width: 15vw;
-        padding: 0px;
+        width: 18vw;
+
     }
     
+    #text{
+        font-size: 20px;
+    }
 
 
 }

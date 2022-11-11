@@ -44,7 +44,7 @@ for (let i = 0; i < obrazky.length; i++) {
 	zakEl.innerHTML = `
 		<img class="image" src="${osoba.src}" alt="${osoba.jmeno}">
 		<div class="overlay">
-			<p class="text">${osoba.jmeno}</p>
+			<p id="text">${osoba.jmeno}</p>
 		</div>
 	`;
 
