@@ -45,7 +45,11 @@ h1{
 h2 {
     font-family: var(--header1);
     font-size: 27px;
-    
+    margin: calc(10vh/8) calc(10vh/8) calc(10vh/8) calc(10vh/8);
+}
+
+p{
+    margin: calc(10vh/8) calc(10vh/8) calc(10vh/8) calc(10vh/8);
 }
 
 p, a{
@@ -54,7 +58,7 @@ p, a{
 }
 
 .program{
-    margin-top: 2px;
+    margin: calc(10vh/8) calc(10vh/8) calc(10vh/8) calc(10vh/8);
 }
 
 .nadpis{
@@ -70,6 +74,7 @@ p, a{
     display:grid;
     justify-content: center;
     padding: 20px;
+    max-height: 100vh;
 }
 
 .tlacitka{
@@ -106,8 +111,6 @@ p, a{
     gap: 0px;
     justify-content: center;
 }
-
-
 
 .overlay {
     position: absolute;
@@ -156,6 +159,10 @@ p, a{
     p, a{
         font-size: 40px;
         margin: 15px;
+    }
+
+    .text{
+        max-height: 100vh;
     }
 
     .tlacitka{
