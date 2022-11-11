@@ -68,6 +68,7 @@ p, a{
 
 .text{
     display:grid;
+    justify-content: center;
     padding: 20px;
 }
 
