@@ -27,7 +27,8 @@ body{
     background-size: cover;
     line-height: 1;
     text-align: center;
-
+    background-color: black;
+    padding-top: 5px;
 }
 
 h1, h2, p{ 
@@ -41,9 +42,10 @@ h1{
     font-size: 35px;
 }
 
-h2{
+h2 {
     font-family: var(--header1);
     font-size: 27px;
+    
 }
 
 p, a{
@@ -51,10 +53,13 @@ p, a{
     font-family: var(--header2);
 }
 
+.program{
+    margin-top: 2px;
+}
+
 .nadpis{
     display:flex;
     flex-direction: column;
-    margin-top: 1em;
 }
 
 .nadpis h1{
@@ -62,7 +67,6 @@ p, a{
 }
 
 .text{
-    margin-top: 10vh;
     display:flex;
     flex-direction: column;
     padding: 20px;
