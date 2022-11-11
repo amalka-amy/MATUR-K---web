@@ -67,8 +67,7 @@ p, a{
 }
 
 .text{
-    display:flex;
-    flex-direction: column;
+    display:grid;
     padding: 20px;
 }
 
@@ -120,7 +119,7 @@ p, a{
 
 }
 
-.zak:hover .overlay {
+.zak:hover .overlay, .zak:active .overlay{
     opacity: 1;
 }
 
