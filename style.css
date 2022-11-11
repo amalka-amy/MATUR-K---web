@@ -1,33 +1,53 @@
 html { box-sizing: border-box; }
 *, :after, :before { box-sizing: inherit; }
 :root {
-    --white: #FFFFFF; 
-    --black: #000000;
-}
-body{
+    --barva_textu: #ffffff; 
+    --pozadi: url("images/texture_4.jpg");
+    --header1:"baron";
+    --header2: "veteran";
     display:flex;
     flex-direction: column;
-    min-height: 100vh;
-    min-width: 100vw;
     justify-content: center;
-    align-items: center;
-    background-color: var(--black);
-    line-height: 1;
+    width: auto;
+    height: 100vh;
 }
 
-h1, p{
-    font-family: 'Bungee', cursive; 
+
+@font-face {
+    font-family: "veteran";
+    src: url(fonts/veteran.ttf);
+}
+
+@font-face {
+    font-family: "baron"; 
+    src: url(fonts/Baron.otf);
+}
+
+body{
+    background-image: var(--pozadi);
+    background-size: cover;
+    line-height: 1;
+    text-align: center;
+}
+
+h1, h2, p{ 
+    color: var(--barva_textu);
     text-align: center;
 }
 
 h1{
-    color: var(--white);
-    font-size: 35px;;
+    font-family: var(--header1);
+    font-size: 35px;
 }
 
-p{
-    color: var(--white);
-    font-size: 20px;
+h2{
+    font-family: var(--header1);
+    font-size: 27px;
+}
+
+p, a{
+    font-size: 18px;
+    font-family: var(--header2);
 }
 
 .nadpis{
@@ -44,24 +64,111 @@ p{
     flex-direction: column;
     padding: 20px;
 }
-.potkate{
-    margin-top: 80px;
+
+.tlacitka{
+    display:grid;
+    flex-direction: column;
+    justify-items: center;
+    gap: 10px;
+}
+
+.tlacitko{
+    border: 1px #626161 solid;
+    border-radius: 5px;
+    box-shadow: 3px 2px #626161;
+    font-family: var(--header2);
+    text-decoration: none;
+    color: var(--barva_textu);
+    padding: 10px;
+    text-align: center;
+
+}
+
+.tlacitko:hover{
+    box-shadow: 2px 1px #626161;
+    color:#666;
+}
+.tlacitko:active{
+    box-shadow: 2px 1px #666;
+    transform: translateY(4px);
+}
+
+.galerie{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0px;
+    justify-content: center;
+}
+
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    width: 50%;
+    background-color: #626161af;
+
+}
+
+.zak:hover .overlay {
+    opacity: 1;
+}
+
+
+
+.zak{
+    width: 30vw;
+    position: relative;
+}
+
+
+.image{
+    width: 100%;
+    display: block;
+    height: auto;
 }
 
 
 @media screen and (min-width: 1400px){
 
+
     h1{
         font-size: 100px;
-        color: var(--white);
         margin:20px;
     }
 
-    p{
-        font-size: 40px;
-        color: var(--white);
+    h2{
+        font-family: var(--header1);
+        font-size: 50px;
         margin: 15px;
     }
+
+    p, a{
+        font-size: 40px;
+        margin: 15px;
+    }
+
+    .tlacitka{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .galerie{
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        column-gap: 0px;
+
+    }
+
+    .image, .overlay, .zak{
+        width: 15vw;
+        padding: 0px;
+    }
+    
 
 
 }
