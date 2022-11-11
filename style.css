@@ -33,6 +33,7 @@ body{
 h1, h2, p{ 
     color: var(--barva_textu);
     text-align: center;
+    letter-spacing: 3px;
 }
 
 h1{
@@ -60,6 +61,7 @@ p, a{
 }
 
 .text{
+    margin-top: 30px;
     display:flex;
     flex-direction: column;
     padding: 20px;
@@ -134,7 +136,13 @@ p, a{
 
 
 @media screen and (min-width: 1400px){
+    .text{
+        margin-top: 50px;
+    }
 
+    h1, h2, p, a{
+        letter-spacing: 5px;
+    }
 
     h1{
         font-size: 100px;
