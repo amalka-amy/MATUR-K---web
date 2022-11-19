@@ -5,11 +5,7 @@ html { box-sizing: border-box; }
     --pozadi: url("images/texture_4.jpg");
     --header1:"baron";
     --header2: "veteran";
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    width: auto;
-    height: 100vh;
+    line-height: 1;
 }
 
 @font-face {
@@ -25,15 +21,12 @@ html { box-sizing: border-box; }
 body{
     background-image: var(--pozadi);
     background-size: cover;
-    line-height: 1;
-    text-align: center;
     background-color: black;
-    padding-top: 5px;
+    margin: 0px;
 }
 
 h1, h2, p{ 
     color: var(--barva_textu);
-    text-align: center;
     letter-spacing: 3px;
 }
 
@@ -58,23 +51,21 @@ p, a{
 }
 
 .program{
-    margin: calc(10vh/8) calc(10vh/8) calc(10vh/8) calc(10vh/8);
+    margin: 10px;
 }
 
-.nadpis{
-    display:flex;
-    flex-direction: column;
-}
 
 .nadpis h1{
     margin:0px;
 }
 
 .text{
-    display:grid;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
     justify-content: center;
-    padding: 20px;
-    max-height: 100vh;
+    text-align: center;
+    
 }
 
 .tlacitka{
@@ -92,8 +83,6 @@ p, a{
     text-decoration: none;
     color: var(--barva_textu);
     padding: 10px;
-    text-align: center;
-
 }
 
 .tlacitko:hover{
@@ -108,8 +97,9 @@ p, a{
 .galerie{
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 0px;
+    gap:0px;
     justify-content: center;
+    width: 100vw;
 }
 
 .overlay {
@@ -128,7 +118,7 @@ p, a{
 }
 
 .zak{
-    width: 30vw;
+    width: calc(100vw/3);
     position: relative;
 }
 
