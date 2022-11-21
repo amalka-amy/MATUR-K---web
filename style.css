@@ -121,10 +121,6 @@ p, a{
     
 }
 
-.overlay>p{
-    width: 70%;
-}
-
 .zak:hover .overlay, .zak:active .overlay{
     opacity: 1;
 }
