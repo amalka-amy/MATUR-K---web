@@ -94,6 +94,10 @@ p, a{
     transform: translateY(4px);
 }
 
+.tlac_program{
+    display:none;
+}
+
 .galerie{
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -110,7 +114,15 @@ p, a{
     right: 0;
     opacity: 0;
     background-color: #626161af;
+    display:grid;
+    justify-content: center;
+    justify-items: center;
+    align-content: space-around;
+    
+}
 
+.overlay>p{
+    width: 70%;
 }
 
 .zak:hover .overlay, .zak:active .overlay{
@@ -128,6 +140,10 @@ p, a{
     height: auto;
 }
 
+.tlaticko_galerie{
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
 
 @media screen and (min-width: 1400px){
 
