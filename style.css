@@ -94,10 +94,6 @@ p, a{
     transform: translateY(4px);
 }
 
-.tlac_program{
-    display:none;
-}
-
 .galerie{
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -121,9 +117,16 @@ p, a{
     
 }
 
-.zak:hover .overlay, .zak:active .overlay{
+
+
+.zak:hover .overlay, .zak:focus .overlay, .zak:active .overlay{
     opacity: 1;
 }
+
+.viditelny{
+    opacity:1;
+}
+
 
 .zak{
     width: calc(100vw/3);

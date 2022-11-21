@@ -119,22 +119,41 @@ const obrazky = [
 
 let fotogalerieEl = document.querySelector('.galerie');
 
+function vypsani(){
+	for (let i = 0; i < (obrazky.length); i++) {
 
-for (let i = 0; i < (obrazky.length); i++) {
+		let osoba = obrazky[i];
 
-	let osoba = obrazky[i];
+		let zakEl = document.createElement('div');
+		zakEl.classList.add('zak');
+		zakEl.innerHTML = `
+		<img class="image" src="${osoba.src}" alt="${osoba.jmeno}">
+		<div class="overlay">
+			<p id="text">${osoba.jmeno}</p>
+		</div>
+		`;
+		
 
-	let zakEl = document.createElement('div');
-	zakEl.classList.add('zak');
-	zakEl.innerHTML = `
-	<img class="image" src="${osoba.src}" alt="${osoba.jmeno}">
-	<div class="overlay">
-		<p id="text">${osoba.jmeno}</p>
-	</div>
-	`;
-	
+		fotogalerieEl.appendChild(zakEl);
 
-	fotogalerieEl.appendChild(zakEl);
-
+	}
 }
 
+vypsani()
+
+/*
+
+.zak:hover .overlay, , .zak:active .overlay
+let vybrany = document.querySelectorAll('.zak');
+vybrany.addEventListener("click", zobrazeni());
+
+function zobrazeni(){
+	vypsani()
+	
+	let textEl = document.querySelector('#text');
+	textEl.classList.add('viditelny');
+}
+
+
+
+*/
