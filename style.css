@@ -38,11 +38,11 @@ h1{
 h2 {
     font-family: var(--header1);
     font-size: 27px;
-    margin: calc(10vh/8) calc(10vh/8) calc(10vh/8) calc(10vh/8);
+    margin: 7px;
 }
 
 p{
-    margin: calc(10vh/8) calc(10vh/8) calc(10vh/8) calc(10vh/8);
+    margin: 7px;
 }
 
 p, a{
@@ -54,7 +54,6 @@ p, a{
     margin: 10px;
 }
 
-
 .nadpis h1{
     margin:0px;
 }
@@ -65,7 +64,6 @@ p, a{
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    
 }
 
 .tlacitka{
@@ -117,12 +115,10 @@ p, a{
 
 .viditelny{
     opacity:1;
-
 }
 
 
 .zak{
-    width: calc(100vw/3);
     position: relative;
 }
 
@@ -135,6 +131,10 @@ p, a{
 .tlaticko_galerie{
     margin-top: 30px;
     margin-bottom: 20px;
+}
+
+.jmeno{
+    font-size: calc(33vw/9);
 }
 
 @media screen and (min-width: 1400px){
@@ -171,18 +171,14 @@ p, a{
 
     .galerie{
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        column-gap: 0px;
-        row-gap: 5px;
-
     }
 
-    .image, .overlay, .zak{
-        width: 18vw;
-
+    .image{
+        width: 100%;
     }
     
     .jmeno{
-        font-size: 20px;
+        font-size: calc(20vw/9);
     }
 
 

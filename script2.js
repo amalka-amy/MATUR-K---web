@@ -14,7 +14,7 @@ const obrazky = [
 	},
 	{
 		src: 'images/04_Drapal.jpg',
-		jmeno: 'MAXIMILIÁN Drápak'
+		jmeno: 'MAXIMILIÁN Drápal'
 	},
 	{
 		src: 'images/05_Finkova.jpg',
@@ -98,7 +98,7 @@ const obrazky = [
 	},
 	{
 		src: 'images/28_Verboon.jpg',
-		jmeno: 'MAIA Verbon'
+		jmeno: 'MAIA Verboon'
 	},
 	{
 		src: 'images/29_Vitu.jpg',
@@ -129,7 +129,7 @@ function vypsani(){
 		zakEl.innerHTML = `
 		<img class="image" src="${osoba.src}" alt="${osoba.jmeno}">
 		<div class="overlay">
-			<p class="jmeno">${osoba.jmeno}</p>
+			<p class="jmeno">${osoba.jmeno.replace(' ','<br>')}</p>
 		</div>
 		`;
 		
