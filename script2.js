@@ -129,31 +129,33 @@ function vypsani(){
 		zakEl.innerHTML = `
 		<img class="image" src="${osoba.src}" alt="${osoba.jmeno}">
 		<div class="overlay">
-			<p id="text">${osoba.jmeno}</p>
+			<p class="jmeno">${osoba.jmeno}</p>
 		</div>
 		`;
 		
-
 		fotogalerieEl.appendChild(zakEl);
-
 	}
 }
 
 vypsani()
 
-/*
-
-.zak:hover .overlay, , .zak:active .overlay
 let vybrany = document.querySelectorAll('.zak');
-vybrany.addEventListener("click", zobrazeni());
 
-function zobrazeni(){
-	vypsani()
-	
-	let textEl = document.querySelector('#text');
-	textEl.classList.add('viditelny');
+for  (let i = 0; i < (vybrany.length); i++){
+	vybrany[i].addEventListener("click", zobrazeni);
 }
 
+function zobrazeni(e){
 
+	let vybrany = document.querySelectorAll('.overlay.viditelny');
 
-*/
+	for  (let i = 0; i < (vybrany.length); i++){
+		vybrany[i].classList.remove('viditelny');
+	}
+
+	let zakEl = e.target.closest('.zak');
+	let overlayEl = zakEl.querySelector('.overlay');
+	overlayEl.classList.add('viditelny');
+	
+}
+

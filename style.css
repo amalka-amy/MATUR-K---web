@@ -111,20 +111,13 @@ p, a{
     opacity: 0;
     background-color: #626161af;
     display:grid;
-    justify-content: center;
-    justify-items: center;
-    align-content: space-around;
-    
-}
-
-
-
-.zak:hover .overlay, .zak:focus .overlay, .zak:active .overlay{
-    opacity: 1;
+    place-content: center;
+    transition: opacity 0.3s;
 }
 
 .viditelny{
     opacity:1;
+
 }
 
 
@@ -167,7 +160,7 @@ p, a{
     }
 
     .text{
-        max-height: 100vh;
+        min-height: 100vh;
     }
 
     .tlacitka{
@@ -188,7 +181,7 @@ p, a{
 
     }
     
-    #text{
+    .jmeno{
         font-size: 20px;
     }
 
