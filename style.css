@@ -1,38 +1,57 @@
 html { box-sizing: border-box; }
 *, :after, :before { box-sizing: inherit; }
 :root {
-    --white: #FFFFFF; 
-    --black: #000000;
-}
-body{
-    display:flex;
-    flex-direction: column;
-    min-height: 100vh;
-    min-width: 100vw;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--black);
+    --barva_textu: #ffffff; 
+    --pozadi: url("images/texture_4.jpg");
+    --header1:"baron";
+    --header2: "veteran";
     line-height: 1;
 }
 
-h1, p{
-    font-family: 'Bungee', cursive; 
-    text-align: center;
+@font-face {
+    font-family: "veteran";
+    src: url(fonts/veteran.ttf);
+}
+
+@font-face {
+    font-family: "baron"; 
+    src: url(fonts/Baron.otf);
+}
+
+body{
+    background-image: var(--pozadi);
+    background-size: cover;
+    background-color: black;
+    margin: 0px;
+}
+
+h1, h2, p{ 
+    color: var(--barva_textu);
+    letter-spacing: 3px;
 }
 
 h1{
-    color: var(--white);
-    font-size: 35px;;
+    font-family: var(--header1);
+    font-size: 35px;
+}
+
+h2 {
+    font-family: var(--header1);
+    font-size: 27px;
+    margin: 7px;
 }
 
 p{
-    color: var(--white);
-    font-size: 20px;
+    margin: 7px;
 }
 
-.nadpis{
-    display:flex;
-    flex-direction: column;
+p, a{
+    font-size: 18px;
+    font-family: var(--header2);
+}
+
+.program{
+    margin: 10px;
 }
 
 .nadpis h1{
@@ -40,27 +59,126 @@ p{
 }
 
 .text{
-    display:flex;
+    display: flex;
+    min-height: 100vh;
     flex-direction: column;
-    padding: 20px;
-}
-.potkate{
-    margin-top: 80px;
+    justify-content: center;
+    text-align: center;
 }
 
+.tlacitka{
+    display:grid;
+    flex-direction: column;
+    justify-items: center;
+    gap: 10px;
+}
+
+.tlacitko{
+    border: 1px #626161 solid;
+    border-radius: 5px;
+    box-shadow: 5px 4px #626161;
+    font-family: var(--header2);
+    text-decoration: none;
+    color: var(--barva_textu);
+    padding: 10px;
+}
+
+.tlacitko:hover{
+    box-shadow: 2px 1px #626161;
+    color:#666;
+}
+.tlacitko:active{
+    box-shadow: 2px 1px #666;
+    transform: translateY(4px);
+}
+
+.galerie{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:0px;
+    justify-content: center;
+    width: 100vw;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    background-color: #626161af;
+    display:grid;
+    place-content: center;
+    transition: opacity 0.3s;
+}
+
+.viditelny{
+    opacity:1;
+}
+
+
+.zak{
+    position: relative;
+}
+
+.image{
+    width: 100%;
+    display: block;
+    height: auto;
+}
+
+.tlaticko_galerie{
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.jmeno{
+    font-size: calc(33vw/9);
+}
 
 @media screen and (min-width: 1400px){
 
+    h1, h2, p, a{
+        letter-spacing: 5px;
+    }
+
     h1{
         font-size: 100px;
-        color: var(--white);
         margin:20px;
     }
 
-    p{
-        font-size: 40px;
-        color: var(--white);
+    h2{
+        font-family: var(--header1);
+        font-size: 50px;
         margin: 15px;
+    }
+
+    p, a{
+        font-size: 40px;
+        margin: 15px;
+    }
+
+    .text{
+        min-height: 100vh;
+    }
+
+    .tlacitka{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .galerie{
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    .image{
+        width: 100%;
+    }
+    
+    .jmeno{
+        font-size: calc(20vw/9);
     }
 
 
