@@ -82,7 +82,7 @@ const obrazky = [
 	},
 	{
 		src: 'images/24_Simunkova.jpg',
-		jmeno: 'BARBORA ANNA Šimůnová'
+		jmeno: 'BARBORA ANNA Šimůnková'
 	},
 	{
 		src: 'images/25_Sulista.jpg',
